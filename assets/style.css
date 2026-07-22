@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root {
+  --ink: #14231C;
+  --paper: #FBFAF7;
+  --green: #1F6F43;
+  --green-dark: #163F27;
+  --sage: #E7EEE7;
+  --bronze: #8C6D4F;
+  --hairline: #D8DED7;
+}
+
+html, body, [class*="css"] { font-family: 'Inter', sans-serif; color: var(--ink); }
+
+header[data-testid="stHeader"] {
+  height: 0;
+  visibility: hidden;
+}
+
+.block-container {
+  max-width: 1180px;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+section[data-testid="stSidebar"] {
+  background: var(--sage);
+}
+
+.sidebar-brand {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--green-dark);
+  margin-bottom: 0.2rem;
+}
+
+.sidebar-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  color: var(--bronze);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-family: 'Source Serif 4', serif;
+  font-weight: 700;
+  font-size: 2.6rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.1em;
+}
+
+.hero-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--bronze);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.2em;
+}
+
+.card {
+  background: var(--sage);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 1.4rem 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.stat-card {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+}
+
+.stat-number {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: var(--green-dark);
+}
+
+.stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: var(--bronze);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.value-display {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 3rem;
+  color: var(--green-dark);
+  margin: 0.2em 0 0.1em 0;
+}
+
+.value-caption {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: #5A6B60;
+}
+
+.epc-strip {
+  display: flex;
+  gap: 3px;
+  margin: 0.8rem 0;
+}
+
+.epc-segment {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: white;
+  border-radius: 3px;
+  opacity: 0.35;
+}
+
+.epc-segment.active {
+  opacity: 1;
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.section-label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-bottom: 2px solid var(--green);
+  padding-bottom: 0.3rem;
+  margin: 0.8rem 0 0.6rem 0;
+}
+
+.delta-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--hairline);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+.delta-row:last-child { border-bottom: none; }
+
+.delta-value {
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.nav-card {
+  display: block;
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-left: 4px solid var(--green);
+  border-radius: 6px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 0.8rem;
+  text-decoration: none;
+}
+
+.nav-card-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.nav-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  color: #5A6B60;
+}
+
+.result-hero {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-left: 6px solid var(--green);
+  border-radius: 8px;
+  padding: 2rem 2.2rem;
+  margin: 1rem 0 1.6rem 0;
+}
+
+div[data-testid="stForm"] {
+  background: var(--paper);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.stButton > button, div[data-testid="stFormSubmitButton"] button {
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+}
+
+.stButton > button:hover, div[data-testid="stFormSubmitButton"] button:hover {
+  background: var(--green-dark);
+  color: white;
+}
