@@ -2,6 +2,7 @@ import os
 import joblib
 import pandas as pd
 import streamlit as st
+from huggingface_hub import hf_hub_download
 from xgboost import XGBRegressor
 
 DATA_DIR = "data"
@@ -41,7 +42,13 @@ def epc_strip_html(active_letter):
 def load_models():
     xgb_model = XGBRegressor()
     xgb_model.load_model(os.path.join(MODEL_DIR, "xgb_model_adjusted.json"))
-    rf_model = joblib.load(os.path.join(MODEL_DIR, "random_forest_adjusted.pkl"))
+
+    rf_path = hf_hub_download(
+        repo_id="B-U-Bharath/manchester-rf-model",
+        filename="random_forest_adjusted_compressed.pkl",
+    )
+    rf_model = joblib.load(rf_path)
+
     ridge_model = joblib.load(os.path.join(MODEL_DIR, "ridge_adjusted.pkl"))
     scaler = joblib.load(os.path.join(MODEL_DIR, "scaler_adjusted.pkl"))
     model_features = joblib.load(os.path.join(MODEL_DIR, "model_features.pkl"))
