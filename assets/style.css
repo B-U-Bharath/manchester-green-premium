@@ -17,6 +17,14 @@ header[data-testid="stHeader"] {
   box-shadow: none;
 }
 
+footer {
+  visibility: hidden;
+}
+
+#MainMenu {
+  visibility: hidden;
+}
+
 .block-container {
   max-width: 1180px;
   padding-top: 3rem;
