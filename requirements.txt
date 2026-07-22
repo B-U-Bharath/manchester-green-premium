@@ -6,3 +6,4 @@ xgboost
 joblib
 folium
 streamlit-folium
+huggingface_hub
