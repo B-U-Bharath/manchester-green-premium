@@ -22,10 +22,10 @@ None of these three datasets share a common ID, so I linked them with a three-ti
 
 | Phase | Notebook | What it does |
 |---|---|---|
-| 1–2 | [`notebooks/Phase1_2_DataEngineering.ipynb`](notebooks/Phase1_2_DataEngineering.ipynb) | Merges the three datasets, deduplicates, builds 19 model features (spatial lag price, distance to city centre and nearest station, property age bands, tenure) |
-| 3 | [`notebooks/Phase3_EDA.ipynb`](notebooks/Phase3_EDA.ipynb) | Exploratory analysis: price trends, spatial distribution, Moran's I spatial autocorrelation (I = 0.4226, p = 0.001) |
-| 4 | [`notebooks/Phase4_Modelling_Final.ipynb`](notebooks/Phase4_Modelling_Final.ipynb) | Ridge, Random Forest, and Optuna-tuned XGBoost, trained on a price-index-adjusted target so the model isn't just picking up market-wide price growth over the sample period |
-| 5 | [`notebooks/Phase5_GreenPremiumAnalysis.ipynb`](notebooks/Phase5_GreenPremiumAnalysis.ipynb) | Isolates the EPC effect itself, with bootstrapped confidence intervals, alpha sensitivity checks, and a breakdown by property type |
+| 1–2 | [`Phase1_2_DataEngineering.ipynb`](Phase1_2_DataEngineering.ipynb) | Merges the three datasets, deduplicates, builds 19 model features (spatial lag price, distance to city centre and nearest station, property age bands, tenure) |
+| 3 | [`Phase3_EDA.ipynb`](Phase3_EDA.ipynb) | Exploratory analysis: price trends, spatial distribution, Moran's I spatial autocorrelation (I = 0.4226, p = 0.001) |
+| 4 | [`Phase4_Modelling_Final.ipynb`](Phase4_Modelling_Final.ipynb) | Ridge, Random Forest, and Optuna-tuned XGBoost, trained on a price-index-adjusted target so the model isn't just picking up market-wide price growth over the sample period |
+| 5 | [`Phase5_GreenPremiumAnalysis.ipynb`](Phase5_GreenPremiumAnalysis.ipynb) | Isolates the EPC effect itself, with bootstrapped confidence intervals, alpha sensitivity checks, and a breakdown by property type |
 | 6 | [`app.py`](app.py), [`pages/`](pages), [`utils.py`](utils.py) | The deployed Streamlit app: price predictor, Green Premium map, model performance dashboard |
 
 ## Results
